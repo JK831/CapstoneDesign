@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "456264713367",
+    "project_id": "coding-adventure-f0b96",
+    "storage_bucket": "coding-adventure-f0b96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456264713367:android:aa9db927ab3f26954b55d2",
+        "android_client_info": {
+          "package_name": "com.Kyeongmarble.ca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456264713367-7626hs3siuq4u166t7t2i0hpiadq7ojp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Kyeongmarble.ca",
+            "certificate_hash": "4af1717d726d1598f339c72f523eacc2caa21bd3"
+          }
+        },
+        {
+          "client_id": "456264713367-8kc7eb1hsddp010lpjskjprv22pl4ri1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNHUFuOg9wWinYOMgaWtLdVO1lBSfQ_tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456264713367-8kc7eb1hsddp010lpjskjprv22pl4ri1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
