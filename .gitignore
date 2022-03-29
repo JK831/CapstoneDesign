@@ -2,6 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
+#라이브러리 폴더는 유니티 에디터에서 자동으로 생성하는 폴더임
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
