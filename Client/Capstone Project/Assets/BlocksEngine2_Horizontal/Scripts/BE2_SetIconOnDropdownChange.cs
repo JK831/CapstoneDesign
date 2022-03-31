@@ -26,11 +26,11 @@ public class BE2_SetIconOnDropdownChange : MonoBehaviour
     void SetIcon()
     {
         string value = dropdown.options[dropdown.value].text;
-        if(value == "Left")
+        if(value == "왼쪽")
         {
             image.sprite = spriteLeft;
         }
-        else if(value == "Right")
+        else if(value == "오른쪽")
         {
             image.sprite = spriteRight;
         }

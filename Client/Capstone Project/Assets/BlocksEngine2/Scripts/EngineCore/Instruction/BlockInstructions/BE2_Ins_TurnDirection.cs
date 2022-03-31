@@ -32,11 +32,11 @@ public class BE2_Ins_TurnDirection : BE2_InstructionBase, I_BE2_Instruction
     {
         _input0 = Section0Inputs[0];
         _value = _input0.StringValue;
-        if (_value == "Left")
+        if (_value == "왼쪽")
         {
             TargetObject.Transform.Rotate(_axis, -90);
         }
-        else if (_value == "Right")
+        else if (_value == "오른쪽")
         {
             TargetObject.Transform.Rotate(_axis, 90);
         }
