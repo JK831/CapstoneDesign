@@ -47,6 +47,7 @@ public class BE2_Ins_WhenKeyPressed : BE2_InstructionBase, I_BE2_Instruction
         KeyCode key = KeyCode.A;
         try
         {
+            //시작조건이 되는 키보드 입력들, 기본목록은 전체키 enum KeyCode 타입
             key = (KeyCode)System.Enum.Parse(typeof(KeyCode), Section0Inputs[0].StringValue);
         }
         catch { }
