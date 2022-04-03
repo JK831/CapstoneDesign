@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/CartoonGUIPack/Scene/demo1.unity
+- path: Assets/Scenes/GameStageSelect.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
