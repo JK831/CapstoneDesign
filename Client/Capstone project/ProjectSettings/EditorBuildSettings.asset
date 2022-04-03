@@ -5,10 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/BlocksEngine2/Scenes/BE2SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/BlocksEngine2_Horizontal/Scenes/HorizontalBE2SampleScene.unity
     guid: 294291218165234658366afe54f7cb81
+  - enabled: 1
+    path: "Assets/Scenes/(\uD559\uC2B5, \uB3C4\uC804) \uC120\uD0DD/ChallengeChoice.unity"
+    guid: caf7b507c6712f447942f1a31de9be5e
+  - enabled: 1
+    path: "Assets/Scenes/(\uD559\uC2B5, \uB3C4\uC804) \uC120\uD0DD/StudyChoice.unity"
+    guid: 9e77b43b6f7a60544a89f8edc4d74872
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/BasicChoice.unity"
+    guid: a1ae175516c664d4880376f9b6762ab6
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/ConditionChoice.unity"
+    guid: 2594e27e5d2c8aa4d94c988e41480c92
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/LoopChoice.unity"
+    guid: 18c1b9098e28d544d87cb3ce753aa29e
   m_configObjects: {}

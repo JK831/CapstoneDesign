@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/CartoonGUIPack/Scene/demo1.unity
+- path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/BasicChoice.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
