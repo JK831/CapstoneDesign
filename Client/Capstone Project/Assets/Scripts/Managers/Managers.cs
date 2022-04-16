@@ -25,6 +25,7 @@ public class Managers : MonoBehaviour
     TargetObjectManager _targetObject = new TargetObjectManager();
     CoinManager _coin = new CoinManager();
     CodeBlockManager _block = new CodeBlockManager();
+    MusicManager _music = new MusicManager();
 
     public static DataManager Data { get { return Instance._data; } }
     public static InputManager Input { get { return Instance._input; } }
@@ -37,6 +38,7 @@ public class Managers : MonoBehaviour
     public static TargetObjectManager TargetObject { get { return Instance._targetObject; } }
     public static CoinManager Coin { get { return Instance._coin; } }
     public static CodeBlockManager CodeBlock { get { return Instance._block; } }
+    public static MusicManager Music { get { return Instance._music; } }
     // Start is called before the first frame update
     void Start()
     { 
@@ -57,6 +59,7 @@ public class Managers : MonoBehaviour
             {
                 go = new GameObject { name = "@Managers" };
                 go.AddComponent<Managers>();
+                
             }
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
@@ -64,6 +67,7 @@ public class Managers : MonoBehaviour
             s_instance._data.Init();
             s_instance._pool.Init();
             s_instance._sound.Init();
+            s_instance._music.Init();
         }
     }
 
