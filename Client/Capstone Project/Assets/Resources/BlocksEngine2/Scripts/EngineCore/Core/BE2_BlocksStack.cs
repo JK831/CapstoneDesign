@@ -108,7 +108,7 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
     public void PopulateStack()
     {
 
-        //ProgrammingEnv안의 ins functiond들의 body를 찾음
+        //ProgrammingEnv안의 if_function들을 찾음
         GameObject[] function_blocks = GameObject.FindGameObjectsWithTag("FunctionBlock");
 
         //못 찾으면 패스

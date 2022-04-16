@@ -41,7 +41,7 @@ public class BE2_Ins_If : BE2_InstructionBase, I_BE2_Instruction
             _input0 = Section0Inputs[0];
             _value = _input0.StringValue;
 
-            if (TargetObject.AbleRight())
+            if (_value == "1" || _value == "true")
             {
                 _isFirstPlay = false;
                 ExecuteSection(0);

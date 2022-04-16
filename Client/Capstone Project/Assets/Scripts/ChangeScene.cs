@@ -33,5 +33,11 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("MainPage");
     }
+    public void MoveToBasic1()
+    {
+        SceneManager.LoadScene("Basic 1");
+    }
+
+
 
 }

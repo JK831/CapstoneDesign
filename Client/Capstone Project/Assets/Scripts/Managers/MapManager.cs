@@ -195,62 +195,6 @@ public class MapManager : I_CheckClear
         return currentPositionInMap;
     }
 
-
-
-    public int MoveCheck(int direction, int velocity)
-    {
-        BE2_TargetObject targetObject = Managers.TargetObject.GetTargetObjectComponent();
-        int currentPositionInMap = targetObject.CurrentPositionInMap;
-        switch (direction)
-        {
-            case (int)Define.Direction.up:
-                direction = -(int)Define.Map.MapWidth;
-                break;
-            case (int)Define.Direction.right:
-                direction = 1;
-                break;
-            case (int)Define.Direction.down:
-                direction = (int)Define.Map.MapWidth;
-                break;
-            case (int)Define.Direction.left:
-                direction = -1;
-                break;
-            default:
-                break;
-
-        }
-
-
-        while (velocity > 0)
-        {
-
-            GameObject block = null;
-            if (currentPositionInMap + direction >= 0 && currentPositionInMap + direction < Map.Count)
-            {
-                if (direction < (int)Define.Map.MapWidth)
-                {
-                    if ((currentPositionInMap % (int)Define.Map.MapWidth) + direction >= (int)Define.Map.MapWidth)
-                        continue;
-
-                }
-
-                if (Map.TryGetValue(currentPositionInMap + direction, out block) && block != null)
-                {
-                    char blockType = block.GetComponent<Block>().BlockType;
-                    if (blockType.Equals('S') || blockType.Equals('1') || blockType.Equals('E'))
-                    {
-                        currentPositionInMap += direction;
-                    }
-
-                }
-
-            }
-
-            velocity--;
-        }
-
-        return currentPositionInMap;
-    }
     public void Clear()
     {
         Map.Clear();

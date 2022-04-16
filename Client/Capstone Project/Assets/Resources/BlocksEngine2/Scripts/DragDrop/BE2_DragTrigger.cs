@@ -50,8 +50,8 @@ public class BE2_DragTrigger : MonoBehaviour, I_BE2_Drag
 
     public void OnDrag()
     {
-        //if (Transform.parent != _dragDropManager.DraggedObjectsTransform)
-        //    Transform.SetParent(_dragDropManager.DraggedObjectsTransform, true);
+        if (Transform.parent != _dragDropManager.DraggedObjectsTransform)
+            Transform.SetParent(_dragDropManager.DraggedObjectsTransform, true);
     }
 
     public void OnPointerUp()

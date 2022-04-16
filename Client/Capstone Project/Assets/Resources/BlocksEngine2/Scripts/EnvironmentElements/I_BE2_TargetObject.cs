@@ -11,10 +11,4 @@ public interface I_BE2_TargetObject
     public void Move();
 
     public void Turn(bool clockWise);
-
-    public bool AbleRight();
-
-    public bool AbleLeft();
-
-    public bool AbleForward();
 }
