@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Resources/BlocksEngine2/Scenes/BE2SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Resources/BlocksEngine2_Horizontal/Scenes/HorizontalBE2SampleScene.unity
+    guid: 294291218165234658366afe54f7cb81
+  - enabled: 1
+    path: Assets/Scenes/MainPage.unity
+    guid: 189e68af955337d4d948a376d5d7a7bb
+  - enabled: 1
+    path: Assets/Scenes/GameStageSelect.unity
+    guid: 9d273db0e8897274f969538f29cd5ed9
+  - enabled: 1
+    path: "Assets/Scenes/(\uD559\uC2B5, \uB3C4\uC804) \uC120\uD0DD/StudyChoice.unity"
+    guid: 9e77b43b6f7a60544a89f8edc4d74872
+  - enabled: 1
+    path: "Assets/Scenes/(\uD559\uC2B5, \uB3C4\uC804) \uC120\uD0DD/ChallengeChoice.unity"
+    guid: caf7b507c6712f447942f1a31de9be5e
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/LoopChoice.unity"
+    guid: 18c1b9098e28d544d87cb3ce753aa29e
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/ConditionChoice.unity"
+    guid: 2594e27e5d2c8aa4d94c988e41480c92
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/BasicChoice.unity"
+    guid: a1ae175516c664d4880376f9b6762ab6
+    path: "Assets/Scenes/(\uD559\uC2B5, \uB3C4\uC804) \uC120\uD0DD/StudyChoice.unity"
+    guid: 9e77b43b6f7a60544a89f8edc4d74872
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/GameStageSelect.unity
+    guid: 9d273db0e8897274f969538f29cd5ed9
+  - enabled: 1
+    path: Assets/Scenes/FirstStudyStage.unity
+    guid: 7703176ec044e6f40adc5512b258e2ad
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/BasicChoice.unity"
+    guid: a1ae175516c664d4880376f9b6762ab6
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/ConditionChoice.unity"
+    guid: 2594e27e5d2c8aa4d94c988e41480c92
+  - enabled: 1
+    path: "Assets/Scenes/(\uAE30\uCD08, if\uBB38, \uBC18\uBCF5\uBB38) \uC120\uD0DD/LoopChoice.unity"
+    guid: 18c1b9098e28d544d87cb3ce753aa29e
+  - enabled: 1
+    path: "Assets/Scenes/(\uD559\uC2B5, \uB3C4\uC804) \uC120\uD0DD/ChallengeChoice.unity"
+    guid: caf7b507c6712f447942f1a31de9be5e
+  m_configObjects: {}
