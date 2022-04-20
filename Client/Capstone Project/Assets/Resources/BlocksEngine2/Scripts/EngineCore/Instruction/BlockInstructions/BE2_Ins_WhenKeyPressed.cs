@@ -53,7 +53,7 @@ public class BE2_Ins_WhenKeyPressed : BE2_InstructionBase, I_BE2_Instruction
         _key = key;
     }
 
-    public new void Function()
+    public void Function()
     {
         ExecuteSection(0);
     }

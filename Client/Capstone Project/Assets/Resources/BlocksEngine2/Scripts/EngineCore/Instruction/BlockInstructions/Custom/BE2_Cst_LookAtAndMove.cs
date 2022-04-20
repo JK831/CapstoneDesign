@@ -20,7 +20,7 @@ public class BE2_Cst_LookAtAndMove : BE2_InstructionBase, I_BE2_Instruction
         _counter = 0;
     }
 
-    public new void Function()
+    public void Function()
     {
         if (_firstPlay)
         {

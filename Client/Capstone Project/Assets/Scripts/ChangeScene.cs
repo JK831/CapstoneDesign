@@ -37,7 +37,10 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Basic 1");
     }
-
+    public void MoveToTest()
+    {
+        LoadingSceneController.LoadScene("aaaa");
+    }
 
 
 }

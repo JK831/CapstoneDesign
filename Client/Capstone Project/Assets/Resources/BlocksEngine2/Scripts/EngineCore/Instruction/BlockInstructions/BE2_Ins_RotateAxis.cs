@@ -28,7 +28,7 @@ public class BE2_Ins_RotateAxis : BE2_InstructionBase, I_BE2_Instruction
     //    
     //}
 
-    public new void Function()
+    public void Function()
     {
         _input0 = Section0Inputs[0];
         _input1 = Section0Inputs[1];

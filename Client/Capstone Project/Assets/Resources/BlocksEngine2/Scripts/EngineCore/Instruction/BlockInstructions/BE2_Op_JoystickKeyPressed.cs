@@ -29,7 +29,7 @@ public class BE2_Op_JoystickKeyPressed : BE2_InstructionBase, I_BE2_Instruction
     //    
     //}
 
-    public new string Operation()
+    public string Operation()
     {
         if (_virtualJoystick.keys[_dropdown.value].isPressed)
         {

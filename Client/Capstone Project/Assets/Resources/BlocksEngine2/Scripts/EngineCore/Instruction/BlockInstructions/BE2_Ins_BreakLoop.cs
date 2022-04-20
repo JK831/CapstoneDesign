@@ -34,7 +34,7 @@ public class BE2_Ins_BreakLoop : BE2_InstructionBase, I_BE2_Instruction
         _parentConditionInstructions = BE2_BlockUtils.GetParentInstructionOfTypeAll(this, BlockTypeEnum.condition).ToArray();
     }
 
-    public new void Function()
+    public void Function()
     {
         if (_parentLoopInstruction != null)
         {

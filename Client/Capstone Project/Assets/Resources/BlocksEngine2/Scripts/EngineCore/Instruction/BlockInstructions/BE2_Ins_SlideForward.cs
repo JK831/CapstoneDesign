@@ -43,7 +43,7 @@ public class BE2_Ins_SlideForward : BE2_InstructionBase, I_BE2_Instruction
     int _counter = 0;
     Vector3 _initialPosition;
 
-    public new void Function()
+    public void Function()
     {
         if (_firstPlay)
         {
