@@ -27,7 +27,7 @@ public class BE2_Ins_MoveForwardWithoutNum : BE2_InstructionBase, I_BE2_Instruct
     //    
     //}
 
-    public new void Function()
+    public void Function()
     {
         //_input0 = Section0Inputs[0];
         _value = 1.0f;

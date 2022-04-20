@@ -28,7 +28,7 @@ public class BE2_Ins_TurnDirectionRight : BE2_InstructionBase, I_BE2_Instruction
     //    
     //}
 
-    public new void Function()
+    public void Function()
     {
         //_input0 = Section0Inputs[0];
         //_value = _input0.StringValue;

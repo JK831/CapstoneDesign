@@ -35,7 +35,7 @@ public class BE2_Ins_Repeat : BE2_InstructionBase, I_BE2_Instruction
         //EndLoop = false;
     }
 
-    public new void Function()
+    public void Function()
     {
         _input0 = Section0Inputs[0];
         _value = _input0.FloatValue;

@@ -24,7 +24,7 @@ public class BE2_Ins_SpacecraftShoot : BE2_InstructionBase, I_BE2_Instruction
     //    
     //}
 
-    public new void Function()
+    public void Function()
     {
         if (TargetObject is BE2_TargetObjectSpacecraft3D)
         {

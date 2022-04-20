@@ -55,7 +55,7 @@ public class BE2_Ins_WhenJoystickKeyPressed : BE2_InstructionBase, I_BE2_Instruc
     //    _key = key;
     //}
 
-    public new void Function()
+    public void Function()
     {
         ExecuteSection(0);
     }

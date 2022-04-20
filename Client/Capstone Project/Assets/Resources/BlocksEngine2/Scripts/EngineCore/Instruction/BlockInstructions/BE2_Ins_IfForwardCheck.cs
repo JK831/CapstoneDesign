@@ -33,7 +33,7 @@ public class BE2_Ins_IfForwardCheck : BE2_InstructionBase, I_BE2_Instruction
         _isFirstPlay = true;
     }
 
-    public new void Function()
+    public void Function()
     {
         //EndLoop = true;
         if (_isFirstPlay)

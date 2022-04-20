@@ -29,7 +29,7 @@ public class BE2_Op_Equal : BE2_InstructionBase, I_BE2_Instruction
     //
     //}
 
-    public new string Operation()
+    public string Operation()
     {
         _input0 = Section0Inputs[0];
         _input1 = Section0Inputs[1];

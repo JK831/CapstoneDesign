@@ -19,7 +19,7 @@ public class BE2_Ins_Return : BE2_InstructionBase, I_BE2_Instruction
     //
     //}
 
-    public new void Function()
+    public void Function()
     {
         BlocksStack.Pointer = 9999;
     }
