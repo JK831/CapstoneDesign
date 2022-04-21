@@ -17,11 +17,11 @@ namespace Server.DB
         static public MySqlCommand cmd;
 
         //추후 정적으로 바꿈
-        static private string DB_IP = "127.0.0.1";
-        static string DB_TARGET = "DB_Test";
-        static string DB_UID = "root";
-        static string DB_PWD = "rudrlzjarhd";
-        static string User_DB_Table = "study_data";
+        static private string DB_IP = "database-codingisland.c37r4fnqfff9.ap-northeast-2.rds.amazonaws.com";
+        static string DB_TARGET = "test_DB";
+        static string DB_UID = "";
+        static string DB_PWD = "";
+        static string User_DB_Table = "user_data";
         static string Challenge_DB_Table = "challenge_data";
 
         public static void challenge_Insert_DB(String UID, byte Stage, byte Star)
