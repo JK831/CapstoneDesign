@@ -316,60 +316,109 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 8.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 10Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 6Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 10.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 4.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 5Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 3Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 9Coin.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 3Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 7.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\CharaOutline.cginc" />
     <None Include="Assets\Resources\MapGeneratingFiles\Loop 4.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 3.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 5Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Basic 2.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\FirstStudyStageCoin.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 8.txt" />
     <None Include="Assets\Resources\BlocksEngine2\Scripts\EditorScripts\InstructionScriptTemplate.txt" />
     <None Include="Assets\Firebase\Plugins\Firebase.App.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 6Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 9Coin.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 10Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 6Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Loop 3.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 10Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 9.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 4Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 6Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 9Coin.txt" />
     <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppAuth.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 7Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 4Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 5.txt" />
     <None Include="Assets\Firebase\Plugins\Firebase.TaskExtension.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 6.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 2.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 10.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 7Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 2Coin.txt" />
     <None Include="Assets\Resources\Suriyun\README.txt" />
-    <None Include="Assets\Resources\MapGeneratingFiles\Basic 1Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 6.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 1Coin.txt" />
     <None Include="Assets\Firebase\Plugins\Firebase.Auth.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 1Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Basic 5.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\FirstStudyStage.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Basic 1.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 8Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 1Coin.txt" />
-    <None Include="Assets\Resources\MapGeneratingFiles\Loop 1Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 5.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 8.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 7.txt" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\Resources\MapGeneratingFiles\Loop 1.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 8Coin.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\CharaMain.cginc" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 9.txt" />
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.Auth.dll" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 5Coin.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
     <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppApp-8_8_0.dll" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\readme.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 3Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 6.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\CharaSkin.cginc" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 3Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 2.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 6.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 4.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 9.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 2Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 8Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 4Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Basic 4.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 2Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 1Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 7.txt" />
     <None Include="Assets\Parse\Plugins\dotNet45\Unity.Compat.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 5.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 4Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 1.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 7Coin.txt" />
     <None Include="Assets\Firebase\Plugins\Firebase.Platform.dll" />
     <None Include="Assets\Resources\MapGeneratingFiles\Basic 3.txt" />
     <None Include="Assets\Parse\Plugins\dotNet45\Unity.Tasks.dll" />
     <None Include="Assets\Resources\MapGeneratingFiles\Challenge 1.txt" />
     <None Include="Assets\Firebase\Plugins\Google.MiniJson.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 2Coin.txt" />
     <None Include="Assets\Resources\MapGeneratingFiles\Loop 2.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 3.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 7.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Loop 7Coin.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.App.dll" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Basic 5Coin.txt" />
+    <None Include="Assets\Resources\MapGeneratingFiles\Condition 10.txt" />
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -606,12 +655,6 @@
     </Reference>
     <Reference Include="Firebase.Auth">
       <HintPath>Assets\Firebase\Plugins\Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
