@@ -10,16 +10,22 @@ namespace Login_Util
 {
     public class LoginManager : MonoBehaviour
     {
+<<<<<<< Updated upstream
         private Firebase.Auth.FirebaseAuth auth;
         private Firebase.Auth.FirebaseUser user;
+=======
+        public Text ScriptTxt1;
+
+        public Text ScriptTxt2;
+        string aa = "";
+>>>>>>> Stashed changes
 
         public GameObject Btn_Login;
         public GameObject Btn_Logout;
         public GameObject User_name_UI;
         public GameObject Btn_MyPage_Login;
         public GameObject Btn_MyPage_Logout;
-        public GameObject Btn_Play_Login;
-        public GameObject Btn_Play_Logout;
+
 
         //void Start()
         //{
@@ -126,15 +132,43 @@ namespace Login_Util
         }
         public void Login_State()
         {
+            Btn_MyPage_Login.SetActive(true);
+            Btn_MyPage_Logout.SetActive(false);
             Btn_Login.SetActive(false);
             Btn_Logout.SetActive(true);
             User_name_UI.SetActive(true);
+<<<<<<< Updated upstream
             Btn_MyPage_Login.SetActive(true);
             Btn_MyPage_Logout.SetActive(false);
             Btn_Play_Login.SetActive(true);
             Btn_Play_Logout.SetActive(false);
         }
+=======
+            aa = Social.localUser.userName;
+            ScriptTxt1 = GameObject.Find("User_Name").GetComponent<Text>();
+            ScriptTxt1.text = aa;
 
+            Transform a = GameObject.Find("MainCanvas").transform;
+            
+
+            a = a.transform.Find("MyPageUI");
+            a = a.transform.Find("MyPage");
+            a = a.transform.Find("Character");
+            a = a.transform.Find("User_Name");
+>>>>>>> Stashed changes
+
+            ScriptTxt2 = a.GetComponent<Text>();
+            ScriptTxt2.text = aa;
+
+            
+
+        }
+        //public void aaa()
+        //{
+        //   ScriptTxt2 = GameObject.Find("User_Name2").GetComponent<Text>();
+        //   ScriptTxt2.text = aa;
+        //}
+        
         public void Logout_State()
         {
             Btn_Login.SetActive(true);
@@ -142,8 +176,6 @@ namespace Login_Util
             User_name_UI.SetActive(false);
             Btn_MyPage_Login.SetActive(false);
             Btn_MyPage_Logout.SetActive(true);
-            Btn_Play_Login.SetActive(false);
-            Btn_Play_Logout.SetActive(true);
         }
 
         public void before_Test()
@@ -153,8 +185,6 @@ namespace Login_Util
             User_name_UI.SetActive(false);
             Btn_MyPage_Login.SetActive(false);
             Btn_MyPage_Logout.SetActive(true);
-            Btn_Play_Login.SetActive(false);
-            Btn_Play_Logout.SetActive(true);
         }
     }
 }
