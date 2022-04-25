@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 223435618663465446}
   - component: {fileID: 114487711934086274}
   - component: {fileID: 114825970636627344}
+  - component: {fileID: 5130376592231774393}
   m_Layer: 5
   m_Name: StageFailImage
   m_TagString: Untagged
@@ -467,6 +468,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &5130376592231774393
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783415007565356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2dc1819546c315445bde68fd211c18ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1568920192462864944
 GameObject:
   m_ObjectHideFlags: 0
