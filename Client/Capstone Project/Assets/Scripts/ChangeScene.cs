@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class ChangeScene : MonoBehaviour
 {
@@ -41,7 +43,11 @@ public class ChangeScene : MonoBehaviour
 
 
     }
-
+    public void MoveToStage()
+    {
+        MoveToMain();
+    }
+    
     public void ReloadMe()
     {
         Managers.Clear();
@@ -50,14 +56,58 @@ public class ChangeScene : MonoBehaviour
 
     public void MoveToNext()
     {
+    
         Managers.Clear();
         string sceneName = SceneManager.GetActiveScene().name;
         int sceneNameLastIndex = sceneName.Length - 1;
-        int replaceNum = sceneName[sceneNameLastIndex] - '0' + 1;
-        char replacedNum = System.Convert.ToChar(replaceNum);
-        LoadingSceneController.LoadScene(sceneName.Replace(sceneName[sceneNameLastIndex], replacedNum));
-        
+        int replaceNum = sceneName[sceneNameLastIndex] + 1; //basic 1
+
+        if ((replaceNum-48) == 10)
+        {
+            if (sceneName[2].Equals('s'))
+            {
+                LoadingSceneController.LoadScene("Basic 10");
+            }
+            else if (sceneName[2].Equals('a'))
+            {
+                LoadingSceneController.LoadScene("Challenge10");
+            }
+            else if (sceneName[2].Equals('n'))
+            {
+                LoadingSceneController.LoadScene("Condition 10");
+            }
+            else if (sceneName[2].Equals('o'))
+            {
+                LoadingSceneController.LoadScene("Loop 10");
+            }
+        }
+        else if ((sceneNameLastIndex == 7) && sceneName[2].Equals('s'))
+        {
+            MoveToMain();
+        }
+        else if ((sceneNameLastIndex == 10) && sceneName[2].Equals('a'))
+        {
+            MoveToMain();
+        }
+        else if ((sceneNameLastIndex == 11) && sceneName[2].Equals('n'))
+        {
+            MoveToMain();
+        }
+        else if ((sceneNameLastIndex == 6) && sceneName[2].Equals('o'))
+        {
+            MoveToMain();
+        }
+
+        else
+        {
+            char replacedNum = System.Convert.ToChar(replaceNum);
+            LoadingSceneController.LoadScene(sceneName.Replace(sceneName[sceneNameLastIndex], replacedNum));
+        }
     }
+    
+
+
+
 
     public void MoveToBasic_1()
     {
