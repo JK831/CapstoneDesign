@@ -274,6 +274,7 @@
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\EngineCore\Instruction\BlockInstructions\BE2_Ins_AddVariable.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\Utils\BE2_BlockUtils.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\EngineCore\Instruction\BlockInstructions\BE2_Ins_TurnDirectionLeft.cs" />
+    <Compile Include="Assets\Scripts\ScrollRectRaycast.cs" />
     <Compile Include="Assets\GooglePlayGames\BasicApi\Nearby\NearbyConnectionConfiguration.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\DragDrop\I_BE2_Raycaster.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\EngineCore\Instruction\BlockInstructions\BE2_Ins_WhenJoystickKeyPressed.cs" />
