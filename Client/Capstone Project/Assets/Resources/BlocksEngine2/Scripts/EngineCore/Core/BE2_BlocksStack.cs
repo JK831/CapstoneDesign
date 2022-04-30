@@ -112,9 +112,7 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
         }
     }
 
-
-
-    public void PopulateStack()
+    public void FunctionAreaUpdate()
     {
         //ProgrammingEnv안의 ins_function들을 찾음
         GameObject[] function_blocks = GameObject.FindGameObjectsWithTag("FunctionBlock");
@@ -140,15 +138,14 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
 
 
             //모든 function 블록에 불러온 functionArea의 body를 넣어줌
-            GameObject function_area_body_copy;
-            //Debug.Log($"area childCount {AllChildrenCount(function_area_body)}");
-            //Debug.Log($"block childCount {AllChildrenCount(function_blocks[function_blocks.Length - 1])}");
+            Debug.Log($"area childCount {AllinsCount(function_area_body)}");
+            Debug.Log($"block childCount {AllinsCount(function_blocks[function_blocks.Length - 1])}");
             //Debug.Log(AllChildrenCount(function_area_body) != AllChildrenCount(function_blocks[function_blocks.Length - 1]));
-            if (AllChildrenCount(function_area_body) != AllChildrenCount(function_blocks[function_blocks.Length - 1]))
+            if (AllinsCount(function_area_body) != AllinsCount(function_blocks[function_blocks.Length - 1]))
             {
                 //Debug.Log($"function_blocks[0] {function_blocks[0].transform.childCount}");
                 //Debug.Log($"function_area_body {function_area_body.transform.childCount}");
-
+                GameObject function_area_body_copy;
                 for (int i = 0; i < function_blocks.Length; i++)
                 {
 
@@ -173,6 +170,16 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
                 }
             }
         }
+    }
+
+    public int AllinsCount(GameObject g)
+    {
+        return g.GetComponentsInChildren<BE2_Block>().Length;
+    }
+
+    public void PopulateStack()
+    {
+        FunctionAreaUpdate();
 
         InstructionsArray = new I_BE2_Instruction[0];
         PopulateStackRecursive(TriggerInstruction.InstructionBase.Block);
@@ -185,28 +192,7 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
         //    Debug.Log($"{i}: {InstructionsArray[i]}");
         //}
     }
-    public int AllChildrenCount(GameObject g)
-    {
-        bool lastCaret = false;
-        int minusCount = 0;
 
-        Transform[] allChildren = g.GetComponentsInChildren<Transform>();
-
-        // InputField Input Caret이 2번 count되는걸 막음
-        foreach (Transform i in allChildren)
-        {
-            if (i.ToString().Contains("Caret"))
-                if (lastCaret == false)
-                    lastCaret = true;
-                else
-                    minusCount += 1;
-            else
-                lastCaret = false;
-        }
-
-
-        return allChildren.Length - minusCount;
-    }
 
 
 
