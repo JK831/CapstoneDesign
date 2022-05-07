@@ -20,6 +20,18 @@ public class PlayButtonEvents : MonoBehaviour
         if(_section.childCount != 0)
         {
 
+            //코딩 영역 저장
+            GameObject g = GameObject.Find("ProgrammingEnv");
+
+            Managers.CodingArea._mainAreaSaved = Instantiate(g.transform.Find("HorizontalBlock Ins WhenPlayClicked").Find("Section0").Find("Body"));
+            DontDestroyOnLoad(Managers.CodingArea._mainAreaSaved);
+            Debug.Log($"{Managers.CodingArea._mainAreaSaved.name}");
+
+            Managers.CodingArea._functionAreaSaved = Instantiate(g.transform.Find("FunctionArea").Find("Section0").Find("Body"));
+            DontDestroyOnLoad(Managers.CodingArea._functionAreaSaved);
+            Debug.Log($"{Managers.CodingArea._functionAreaSaved.name}");
+
+
 
             //카메라 전환
             GameObject.Find("QuaterView Camera").GetComponent<CameraController>().ChangeToQuarterView();

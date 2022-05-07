@@ -39,7 +39,7 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        if(_mode == Define.CameraMode.QuarterView)
+        if (_mode == Define.CameraMode.QuarterView)
         {
             overViewCamera.enabled = false;
             quarterViewCamera.enabled = true;

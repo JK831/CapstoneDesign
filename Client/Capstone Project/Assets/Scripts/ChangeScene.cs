@@ -52,6 +52,7 @@ public class ChangeScene : MonoBehaviour
     {
         Managers.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     public void MoveToNext()

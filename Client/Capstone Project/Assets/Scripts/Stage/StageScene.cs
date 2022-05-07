@@ -9,14 +9,13 @@ public class StageScene : BaseScene
 {
     GameObject be2ProgEnv = null;
 
-    [SerializeField]
-    private bool IncludeFuntionBlock = false;
+
     protected override void Init()
     {
         base.Init();
         SceneType = Define.Scene.Game;
         bool success = Managers.Map.GenerateMap();
-        success = Managers.Coin.GenerateCoin();
+        success &= Managers.Coin.GenerateCoin();
 
 
         if (!success) // 맵, 코인 둘 중 하나라도 생성 실패 시
@@ -34,10 +33,8 @@ public class StageScene : BaseScene
                 Managers.Scene.LoadScene(Define.Scene.Lobby);
             }
 
-            if (IncludeFuntionBlock)
-                be2ProgEnv = Managers.Resource.Instantiate("Blocks Engine 2 with function");
-            else
-                be2ProgEnv = Managers.Resource.Instantiate("Blocks Engine 2");
+            be2ProgEnv = Managers.Resource.Instantiate("Blocks Engine 2 with function");
+
 
             Managers.CodeBlock.BE2ProgEnv = be2ProgEnv;
             if (be2ProgEnv == null)
@@ -52,6 +49,17 @@ public class StageScene : BaseScene
                 Transform quarterViewCamera = be2ProgEnv.transform.Find("QuaterView Camera");
                 if (quarterViewCamera != null)
                     quarterViewCamera.GetComponent<CameraController>().Player = character;
+
+                Managers.CodingArea.Init();
+
+                Managers.CodingArea.PutArea();
+
+                if (Managers.CodingArea._mainAreaSaved != null)
+                    Destroy(Managers.CodingArea._mainAreaSaved.gameObject);
+                if (Managers.CodingArea._functionAreaSaved != null)
+                    Destroy(Managers.CodingArea._functionAreaSaved.gameObject);
+
+                RefreshCodingArea(Managers.CodingArea._mainArea, Managers.CodingArea._functionArea);
             }
 
             Managers.Stage.ConditionSet();
@@ -80,6 +88,52 @@ public class StageScene : BaseScene
                     
 
             }
+        }
+
+
+        void RefreshCodingArea(Transform mainBody, Transform functionBody)
+        {
+            Debug.Log("refresh called");
+            if (mainBody != null)
+            {
+                int count = mainBody.childCount;
+                GameObject[] copyObject = new GameObject[count];
+
+                Debug.Log("${mainBody.childCount}");
+                
+                for (int i = 0; i < count; i++)
+                {
+                    GameObject go = mainBody.GetChild(i).gameObject;
+                    copyObject[i] = GameObject.Instantiate(go);
+                    Managers.Resource.Destroy(go);
+                }
+
+                for (int i = 0; i < count; i++)
+                {
+                    copyObject[i].transform.SetParent(mainBody, false);
+                }
+            }
+
+            if (functionBody != null)
+            {
+                int count = functionBody.childCount;
+                GameObject[] copyObject = new GameObject[count];
+
+                Debug.Log("${functionBody.childCount}");
+
+                for (int i = 0; i < count; i++)
+                {
+                    GameObject go = functionBody.GetChild(i).gameObject;
+                    copyObject[i] = GameObject.Instantiate(go);
+                    Managers.Resource.Destroy(go);
+                }
+
+                for (int i = 0; i < count; i++)
+                {
+                    copyObject[i].transform.SetParent(functionBody, false);
+                }
+            }
+
         }
 
 
