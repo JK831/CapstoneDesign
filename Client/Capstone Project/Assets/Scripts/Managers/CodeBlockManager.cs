@@ -28,7 +28,7 @@ public class CodeBlockManager : I_CheckClear
         currentNOCodeBlocks = CheckChildCount(_be2ProgEnv.transform.Find("Speeder TO and PE").Find("Canvas Programming Env").Find("Scroll View").Find("Viewport")
             .Find("ProgrammingEnv").Find("HorizontalBlock Ins WhenPlayClicked").Find("Section0").Find("Body")); // 재귀함수에 의해 Block 추가된 것 -1*/
 
-        Debug.Log(currentNOCodeBlocks);
+        //Debug.Log(currentNOCodeBlocks);
 
         return currentNOCodeBlocks <= _blockRestriction;
     }

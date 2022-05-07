@@ -116,6 +116,22 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
 
     public void PopulateStack()
     {
+        functionAreaUpdate();
+
+        InstructionsArray = new I_BE2_Instruction[0];
+        PopulateStackRecursive(TriggerInstruction.InstructionBase.Block);
+        _arrayLength = InstructionsArray.Length;
+
+
+        //Debug.Log($"length: {InstructionsArray.Length}");
+        //for (int i = 0; i < InstructionsArray.Length; i++)
+        //{
+        //    Debug.Log($"{i}: {InstructionsArray[i]}");
+        //}
+    }
+
+    void functionAreaUpdate()
+    {
         //ProgrammingEnv안의 ins_function들을 찾음
         GameObject[] function_blocks = GameObject.FindGameObjectsWithTag("FunctionBlock");
 
@@ -133,7 +149,7 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
             foreach (Transform ins in function_area_body.GetComponentsInChildren<Transform>())
             {
                 if (ins.name.Equals("HorizontalBlock Ins Function"))
-                    Destroy(ins.gameObject);
+                    Managers.Resource.Destroy(ins.gameObject);
             }
 
 
@@ -155,7 +171,7 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
                     function_area_body_copy = Instantiate(function_area_body);
                     foreach (Transform child in function_blocks[i].transform)
                     {
-                        Destroy(child.gameObject);
+                        Managers.Resource.Destroy(child.gameObject);
                     }
 
 
@@ -169,23 +185,12 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
                         child.transform.localScale = new Vector3(0, 0, 0);
 
                     }
-                    Destroy(function_area_body_copy);
+                    Managers.Resource.Destroy(function_area_body_copy);
                 }
             }
         }
-
-        InstructionsArray = new I_BE2_Instruction[0];
-        PopulateStackRecursive(TriggerInstruction.InstructionBase.Block);
-        _arrayLength = InstructionsArray.Length;
-
-
-        //Debug.Log($"length: {InstructionsArray.Length}");
-        //for (int i = 0; i < InstructionsArray.Length; i++)
-        //{
-        //    Debug.Log($"{i}: {InstructionsArray[i]}");
-        //}
     }
-    public int AllChildrenCount(GameObject g)
+    int AllChildrenCount(GameObject g)
     {
         bool lastCaret = false;
         int minusCount = 0;

@@ -32,7 +32,7 @@ public class PlayButtonEvents : MonoBehaviour
             //실행
             BE2_ExecutionManager e2ExecutionManager = GameObject.Find("BE2 Execution Manager").GetComponent<BE2_ExecutionManager>();
             e2ExecutionManager.totalNumOfBlocks = GameObject.Find("HorizontalBlock Ins WhenPlayClicked").GetComponent<BE2_BlocksStack>().InstructionsArray.Length; // 실행 시점의 블록 개수 저장
-            Debug.Log(e2ExecutionManager.totalNumOfBlocks);
+            //Debug.Log(e2ExecutionManager.totalNumOfBlocks);
             e2ExecutionManager.PlayAfterDelay();
 
 

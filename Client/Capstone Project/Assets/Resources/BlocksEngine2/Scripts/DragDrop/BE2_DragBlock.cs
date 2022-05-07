@@ -63,7 +63,7 @@ public class BE2_DragBlock : MonoBehaviour, I_BE2_Drag
         Transform ghostBlockTransform = _dragDropManager.GhostBlockTransform;
         if (spot is BE2_SpotBlockBody && spot.Block != Block && !spot.Block.ToString().Contains("HorizontalBlock Ins Function"))
         {
-            Debug.Log($"spot: {spot.Block}");
+            //Debug.Log($"spot: {spot.Block}");
             ghostBlockTransform.SetParent(spot.Transform);
             ghostBlockTransform.localScale = Vector3.one;
             ghostBlockTransform.gameObject.SetActive(true);
