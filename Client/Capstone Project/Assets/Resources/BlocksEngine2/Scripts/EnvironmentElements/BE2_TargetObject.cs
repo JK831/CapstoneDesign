@@ -125,8 +125,61 @@ public class BE2_TargetObject : MonoBehaviour, I_BE2_TargetObject
                     cameraController.ChangeToOverViewWithDelay();
                     isMoved = false;
                     Debug.Log("move finished");
-                    CheckClear();
 
+                    bool success = Managers.Stage.CheckConditionCompleted();
+                    UI_Finished popup = null;
+                    if (success) // 목적지에 도달했다면
+                    {
+                        if (!SceneManager.GetActiveScene().name.Contains("Challenge")) // Challenge 스테이지가 아닐 시 팝업
+                        {
+                            GameObject go = Managers.Resource.Instantiate("StudyStage_Complete1");
+                            popup = go.AddComponent<UI_StudyClearPopup>();
+                            popup.Init();
+                        }
+                        else
+                        {
+                            GameObject go = Managers.Resource.Instantiate("ChallengeStage_Complete1");
+                            popup = go.AddComponent<UI_ClearPopup>();
+                            popup.Init();
+
+                            string sceneName = SceneManager.GetActiveScene().name;
+                            string tempName = Regex.Replace(sceneName, @"\D", "");
+                            byte challengeNum = byte.Parse(tempName);
+
+                            byte stars = 0;
+
+                            if (Managers.User.ChallangeStageInfo.TryGetValue(challengeNum, out stars))
+                            {
+                                int currentCount = Managers.Stage.CompletedConditionList.Count;
+                                if (currentCount > stars)
+                                {
+                                    stars = (byte)currentCount;
+                                    Managers.User.ChallangeStageInfo.Remove(challengeNum);
+                                    Managers.User.ChallangeStageInfo.Add(challengeNum, stars);
+                                    Managers.User.ChallangeStageInfo.Add((ushort)(challengeNum + 1), 0);
+                                    Managers.User.TotalStars += (ushort)currentCount;
+
+                                    C_ChallengeUpdateStars pkt = new C_ChallengeUpdateStars();
+                                    pkt.UId = Managers.User.UID;
+                                    pkt.stageId = challengeNum;
+                                    pkt.numberOfStars = stars;
+
+                                    Managers.Network.Send(pkt.Write());
+                                }
+                            }
+                            else
+                            {
+                                Debug.Log("Stage Num Error");
+                            }
+                            
+                        }
+                    }
+                    else
+                    {
+                        GameObject go = Managers.Resource.Instantiate("Stage_fail1");
+                        popup = go.AddComponent<UI_FailedPopup>();
+                        popup.Init();
+                    }
                     //GameObject.Find("Blocks Engine 2 with function").SetActive(false);
                 }
             }
@@ -139,64 +192,6 @@ public class BE2_TargetObject : MonoBehaviour, I_BE2_TargetObject
             startAnimation(_state);
             this.gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, _target, _speed * Time.deltaTime);
             this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 20 * Time.deltaTime);
-        }
-    }
-
-    void CheckClear()
-    {
-        bool success = Managers.Stage.CheckConditionCompleted();
-        UI_Finished popup = null;
-        if (success) // 목적지에 도달했다면
-        {
-            if (!SceneManager.GetActiveScene().name.Contains("Challenge")) // Challenge 스테이지가 아닐 시 팝업
-            {
-                GameObject go = Managers.Resource.Instantiate("StudyStage_Complete1");
-                popup = go.AddComponent<UI_StudyClearPopup>();
-                popup.Init();
-            }
-            else
-            {
-                GameObject go = Managers.Resource.Instantiate("ChallengeStage_Complete1");
-                popup = go.AddComponent<UI_ClearPopup>();
-                popup.Init();
-
-                string sceneName = SceneManager.GetActiveScene().name;
-                string tempName = Regex.Replace(sceneName, @"\D", "");
-                byte challengeNum = byte.Parse(tempName);
-
-                byte stars = 0;
-
-                if (Managers.User.ChallangeStageInfo.TryGetValue(challengeNum, out stars))
-                {
-                    int currentCount = Managers.Stage.CompletedConditionList.Count;
-                    if (currentCount > stars)
-                    {
-                        stars = (byte)currentCount;
-                        Managers.User.ChallangeStageInfo.Remove(challengeNum);
-                        Managers.User.ChallangeStageInfo.Add(challengeNum, stars);
-                        Managers.User.ChallangeStageInfo.Add((ushort)(challengeNum + 1), 0);
-                        Managers.User.TotalStars += (ushort)currentCount;
-
-                        C_ChallengeUpdateStars pkt = new C_ChallengeUpdateStars();
-                        pkt.UId = Managers.User.UID;
-                        pkt.stageId = challengeNum;
-                        pkt.numberOfStars = stars;
-
-                        Managers.Network.Send(pkt.Write());
-                    }
-                }
-                else
-                {
-                    Debug.Log("Stage Num Error");
-                }
-
-            }
-        }
-        else
-        {
-            GameObject go = Managers.Resource.Instantiate("Stage_fail1");
-            popup = go.AddComponent<UI_FailedPopup>();
-            popup.Init();
         }
     }
 
