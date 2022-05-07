@@ -160,7 +160,7 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
             //Debug.Log($"area childCount {AllChildrenCount(function_area_body)}");
             //Debug.Log($"block childCount {AllChildrenCount(function_blocks[function_blocks.Length - 1])}");
             //Debug.Log(AllChildrenCount(function_area_body) != AllChildrenCount(function_blocks[function_blocks.Length - 1]));
-            if (AllChildrenCount(function_area_body) != AllChildrenCount(function_blocks[function_blocks.Length - 1]))
+            if (AllInsCount(function_area_body) != AllInsCount(function_blocks[function_blocks.Length - 1]))
             {
                 //Debug.Log($"function_blocks[0] {function_blocks[0].transform.childCount}");
                 //Debug.Log($"function_area_body {function_area_body.transform.childCount}");
@@ -190,27 +190,9 @@ public class BE2_BlocksStack : MonoBehaviour, I_BE2_BlocksStack
             }
         }
     }
-    int AllChildrenCount(GameObject g)
+    int AllInsCount(GameObject g)
     {
-        bool lastCaret = false;
-        int minusCount = 0;
-
-        Transform[] allChildren = g.GetComponentsInChildren<Transform>();
-
-        // InputField Input Caret이 2번 count되는걸 막음
-        foreach (Transform i in allChildren)
-        {
-            if (i.ToString().Contains("Caret"))
-                if (lastCaret == false)
-                    lastCaret = true;
-                else
-                    minusCount += 1;
-            else
-                lastCaret = false;
-        }
-
-
-        return allChildren.Length - minusCount;
+        return g.GetComponentsInChildren<BE2_Block>().Length;
     }
 
 
