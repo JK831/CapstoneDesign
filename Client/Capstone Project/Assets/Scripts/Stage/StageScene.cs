@@ -105,6 +105,7 @@ public class StageScene : BaseScene
                 {
                     GameObject go = mainBody.GetChild(i).gameObject;
                     copyObject[i] = GameObject.Instantiate(go);
+                    copyObject[i].name = go.name;
                     Managers.Resource.Destroy(go);
                 }
 
@@ -125,6 +126,7 @@ public class StageScene : BaseScene
                 {
                     GameObject go = functionBody.GetChild(i).gameObject;
                     copyObject[i] = GameObject.Instantiate(go);
+                    copyObject[i].name = go.name;
                     Managers.Resource.Destroy(go);
                 }
 

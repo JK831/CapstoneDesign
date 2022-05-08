@@ -246,6 +246,7 @@
     <Compile Include="Assets\Resources\BlocksEngine2_Horizontal\Scripts\BlockSections\BE2_HorizontalBlockSectionBody.cs" />
     <Compile Include="Assets\Scripts\UI\Popup\UI_ClearPopup.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\DragDrop\BE2_DragDropManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\CodingAreaManager.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\EngineCore\Instruction\BE2_InstructionBase.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\EngineCore\Instruction\BlockInstructions\BE2_Op_Multiply.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
@@ -337,7 +338,6 @@
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\UI\ContextMenu\BE2_UI_ContextMenuManager.cs" />
     <Compile Include="Assets\Minimal\MainGui.cs" />
     <Compile Include="Assets\Resources\BlocksEngine2\Scripts\EngineCore\Instruction\BlockInstructions\BE2_Ins_TranslateToPosition.cs" />
-    <Compile Include="Assets\Scripts\Managers\CodingAreaManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

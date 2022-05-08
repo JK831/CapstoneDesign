@@ -24,10 +24,12 @@ public class PlayButtonEvents : MonoBehaviour
             GameObject g = GameObject.Find("ProgrammingEnv");
 
             Managers.CodingArea._mainAreaSaved = Instantiate(g.transform.Find("HorizontalBlock Ins WhenPlayClicked").Find("Section0").Find("Body"));
+            Managers.CodingArea._mainAreaSaved.name = "MainArea(Clone)";
             DontDestroyOnLoad(Managers.CodingArea._mainAreaSaved);
             Debug.Log($"{Managers.CodingArea._mainAreaSaved.name}");
 
             Managers.CodingArea._functionAreaSaved = Instantiate(g.transform.Find("FunctionArea").Find("Section0").Find("Body"));
+            Managers.CodingArea._functionAreaSaved.name = "FunctionArea(Clone)";
             DontDestroyOnLoad(Managers.CodingArea._functionAreaSaved);
             Debug.Log($"{Managers.CodingArea._functionAreaSaved.name}");
 
