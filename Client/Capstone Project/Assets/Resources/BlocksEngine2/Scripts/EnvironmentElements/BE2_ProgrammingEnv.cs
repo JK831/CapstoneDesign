@@ -51,7 +51,7 @@ public class BE2_ProgrammingEnv : MonoBehaviour, I_BE2_ProgrammingEnv
     void Awake()
     {
         // v2.5 - sets the ProgrammingEnv reference on the TargetObject
-        targetObject = Managers.TargetObject.GetTargetObject(Managers.User.Character).GetComponent<Character>();
+        targetObject = Managers.TargetObject.GetTargetObject("Character").GetComponent<Character>();
         targetObject.ProgrammingEnv = this;
 
         _transform = transform;

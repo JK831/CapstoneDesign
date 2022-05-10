@@ -17,7 +17,7 @@ public class MapManager : I_CheckClear
     public bool CheckCleared() // 현재 캐릭터의 위치가 EndBlock이라면 True 반환
     {
         GameObject block = null;
-        if (Map.TryGetValue(Managers.TargetObject.GetTargetObject(Managers.User.Character).GetComponent<Character>().CurrentPositionInMap, out block))
+        if (Map.TryGetValue(Managers.TargetObject.GetTargetObject("Character").GetComponent<Character>().CurrentPositionInMap, out block))
         {
             return block.GetComponent<Block>().BlockType.Equals('E');
         }
@@ -28,7 +28,7 @@ public class MapManager : I_CheckClear
     public bool CheckDeadBlock()
     {
         GameObject block = null;
-        if (Map.TryGetValue(Managers.TargetObject.GetTargetObject(Managers.User.Character).GetComponent<Character>().CurrentPositionInMap, out block))
+        if (Map.TryGetValue(Managers.TargetObject.GetTargetObject("Character").GetComponent<Character>().CurrentPositionInMap, out block))
         {
             return block.GetComponent<Block>().BlockType.Equals('D');
         }
@@ -138,13 +138,14 @@ public class MapManager : I_CheckClear
                 {   //해당하는 블록을 로드하여 적절한 위치에 생성해준다.
                     block = Managers.Resource.Instantiate($"{name}", go.transform);
                     block.transform.localPosition = new Vector3((float)Define.Setting.BlockStartPosition + (int)Define.Setting.BlockWidth * colCount, _blockStartHeight, currentBlockZStartPosition);
-                    block.AddComponent<Block>().BlockId = blockId;
+                    block.AddComponent<Block>();
+                    block.GetComponent<Block>().BlockId = blockId;
                     block.GetComponent<Block>().BlockType = splitLines[i][colCount];
                     
 
                     if (name.Equals("StartBlock") || name.Equals("StartBlock(Right)") || name.Equals("StartBlock(Down)") || name.Equals("StartBlock(Left)"))
                     {
-                        GameObject character = Managers.TargetObject.GetTargetObject(Managers.User.Character);
+                        GameObject character = Managers.TargetObject.GetTargetObject("Character");
                         Debug.Log($"{character}");
                         character.transform.position = block.transform.position + new Vector3(0, 0.9f, 0);
                         character.GetComponent<Character>().CurrentPositionInMap = blockId;
@@ -170,25 +171,9 @@ public class MapManager : I_CheckClear
                     {
                         block.transform.localPosition += new Vector3(0, -1.0f, 0);
                     }
-
-                    else if (name.Equals("EndBlock"))
+                    else if (!(name.Equals("Block") || name.Equals("EndBlock")))
                     {
-                        string stageName = SceneManager.GetActiveScene().name;
-                        if (stageName.Contains("Challenge"))
-                        {
-                            GameObject character;
-
-                            string stageNum = stageName.Substring(9);
-
-                            character = Managers.Resource.Instantiate($"Character{stageNum}", go.transform);
-                            character.transform.position = block.transform.position + new Vector3(0, 0.9f, 0);
-
-                        }
-                    }
-
-                    else if (!name.Equals("Block"))
-                    { 
-                            block.transform.localPosition += new Vector3(0, 1.6f, 0);
+                        block.transform.localPosition += new Vector3(0, 1.6f, 0);
                     }
 
                     Map.Add(blockId, block);

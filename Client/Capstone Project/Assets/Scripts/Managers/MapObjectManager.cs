@@ -29,6 +29,7 @@ public class MapObjectManager
         string[] splitLines = str.Split('\n');
         int lines = splitLines.Length;
 
+        Debug.Log(str);
         for (int i = 0; i < lines; i++)
             splitLines[i] = splitLines[i].Trim('\r');
 
@@ -36,7 +37,8 @@ public class MapObjectManager
 
         for (int i = 0; i < lines; i++ /*File.ReadLines(Application.dataPath + $"/Resources/MapGeneratingFiles/{sceneName}.txt")*/)
         {
-
+            Debug.Log($"i = {i}");
+            Debug.Log($"splitLines{i}.Length = {splitLines[i].Length}");
             if (splitLines[i].Length > (int)Define.Map.MapWidth) // 가로로 놓을 수 있는 블록의 최대 개수 20
             {
                 Debug.Log("Line length exeed map width");
@@ -58,7 +60,7 @@ public class MapObjectManager
                     objectMap.Add(blockId++, null);
                     continue;
                 }
-
+                Debug.Log(splitLines[i][colCount]);
 
                 switch (splitLines[i][colCount])
                 {
@@ -78,28 +80,10 @@ public class MapObjectManager
                         name = "Knight(Right)";
                         break;
                     case 'T':
-                        name = "Tiger(Up)";
-                        break;
-                    case 'Q':
-                        name = "Tiger(Left)";
-                        break;
-                    case 'E':
-                        name = "Tiger(Right)";
-                        break;
-                    case 'Y':
-                        name = "Tiger(Down)";
+                        name = "Tiger";
                         break;
                     case 'B':
-                        name = "BlackBull(Up)";
-                        break;
-                    case 'Z':
-                        name = "BlackBull(Left)";
-                        break;
-                    case 'X':
-                        name = "BlackBull(Right)";
-                        break;
-                    case 'V':
-                        name = "BlackBull(Down)";
+                        name = "BlackBull";
                         break;
                     case '1':
                         name = "Tree1";
@@ -153,7 +137,8 @@ public class MapObjectManager
                             return false;
                         }
                         currentObject.transform.position = parentBlock.transform.position + new Vector3(0, Managers.Coin.coinHeight, 0);
-
+                        Debug.Log($"child = {currentObject.transform.position}");
+                        Debug.Log($"parent = {parentBlock.transform.position}");
                         Managers.Coin.CoinMap.Add(blockId, currentObject);
                     }
 
@@ -161,53 +146,33 @@ public class MapObjectManager
                     objectMap.Add(blockId++, currentObject);
 
                     continue;
-                }   
-
-                else if (name.Contains("Tree"))
-                {
-                    currentObject = Managers.Resource.Instantiate($"MapObject/{name}", go.transform);
-
-                    if (currentObject == null)
-                    {
-                        Debug.Log("Tree 생성 실패");
-                        return false;
-                    }
                 }
 
-                else
+                
+                else if (name.Contains("Knight"))
                 {
-                    int direction; // 적이 바라보는 방향
-                    String[] objectName = name.Split('('); // 괄호를 기준으로 이름 나눈다
-
-                    if (objectName[0].Contains("Knight"))
-                    {
-                        string knightPrefab = "Knight";
-                        Debug.Log($"MapObject/{knightPrefab}{(int)Enum.Parse(typeof(Define.KnightTypeByStage), sceneName)}");
-                        currentObject = Managers.Resource.Instantiate($"MapObject/{knightPrefab}{(int)Enum.Parse(typeof(Define.KnightTypeByStage), sceneName)}", go.transform);
-                        
-                    }
-                    else
-                    {
-                        currentObject = Managers.Resource.Instantiate($"MapObject/{objectName}");
-                    }
+                    string knightPrefab = "Knight";
+                    Debug.Log($"MapObject/{knightPrefab}{(int)Enum.Parse(typeof(Define.KnightTypeByStage), sceneName)}");
+                    currentObject = Managers.Resource.Instantiate($"MapObject/{knightPrefab}{(int)Enum.Parse(typeof(Define.KnightTypeByStage), sceneName)}", go.transform);
+                    int direction; // 기사가 바라보는 방향
 
                     if (currentObject == null)
                     {
-                        Debug.Log("Wrong Type");
+                        Debug.Log("Wrong Knight Type");
                         return false;
                     }
 
-                    if (objectName[1].Contains("Right"))
+                    if (name.Contains("Right"))
                     {
                         currentObject.transform.forward = currentObject.transform.right;
                         direction = 1;
                     }
-                    else if (objectName[1].Contains("Down"))
+                    else if (name.Contains("Down"))
                     {
                         currentObject.transform.forward = -currentObject.transform.forward;
                         direction = (int)Define.Map.MapWidth;
                     }
-                    else if (objectName[1].Contains("Left"))
+                    else if (name.Contains("Left"))
                     {
                         currentObject.transform.forward = -currentObject.transform.right;
                         direction = -1;
@@ -217,7 +182,7 @@ public class MapObjectManager
                         direction = -(int)Define.Map.MapWidth;
                     }
 
-                    int deadBlockPosition = blockId + direction; //적이 바라보는 방향에 따라 지나가면 안 되는 블록을 설정한다.
+                    int deadBlockPosition = blockId + direction; //기사가 바라보는 방향에 따라 지나가면 안 되는 블록을 설정한다.
                     if (deadBlockPosition > 0 && deadBlockPosition < Managers.Map.GetMap().Count)
                     {
                         GameObject originalBlock;
@@ -229,7 +194,7 @@ public class MapObjectManager
                             Debug.Log("Wrong setting on knight position");
                             return false;
                         }
-
+                            
                         Managers.Map.GetMap().Remove(deadBlockPosition); // 기존 블록 삭제
                         GameObject deadBlock = Managers.Resource.Instantiate("DeadBlock", go.transform);
                         deadBlock.transform.position = originalBlock.transform.position;
@@ -238,6 +203,17 @@ public class MapObjectManager
                         deadBlockScript.BlockType = 'D';
                         GameObject.DestroyImmediate(originalBlock);
                         Managers.Map.GetMap().Add(deadBlockPosition, deadBlock);
+                    }
+                }
+
+                else if (name.Contains("Tree"))
+                {
+                    currentObject = Managers.Resource.Instantiate($"MapObject/{name}", go.transform);
+
+                    if (currentObject == null)
+                    {
+                        Debug.Log("Tree 생성 실패");
+                        return false;
                     }
                 }
 

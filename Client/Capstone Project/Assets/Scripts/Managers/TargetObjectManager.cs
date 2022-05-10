@@ -15,7 +15,7 @@ public class TargetObjectManager
         {
             _targetObject = Managers.Resource.Instantiate(objectName, GameObject.Find("Island").transform);
 
-            if (objectName.Contains("Character"))
+            if (objectName.Equals("Character"))
                 _targetObject.AddComponent<Character>();
             else
                 _targetObject.AddComponent<BE2_TargetObject>();
