@@ -35,6 +35,7 @@ public class CodingAreaManager
             while (_mainAreaSaved.transform.childCount != 0)
             {
                 Transform child = _mainAreaSaved.transform.GetChild(0);
+                
                 child.SetParent(_mainArea.transform, false);
             }
         }
@@ -54,8 +55,10 @@ public class CodingAreaManager
 
     public void Clear()
     {
-        _mainAreaSaved = null;
-        _functionAreaSaved = null;
+        if(_mainAreaSaved != null)
+            Managers.Resource.Destroy(_mainAreaSaved.gameObject);
+        if (_functionAreaSaved != null)
+            Managers.Resource.Destroy(_functionAreaSaved.gameObject);
 
         _mainArea = null;
         _functionArea = null;

@@ -143,10 +143,9 @@ public class MapManager : I_CheckClear
                     block.GetComponent<Block>().BlockType = splitLines[i][colCount];
                     
 
-                    if (name.Equals("StartBlock") || name.Equals("StartBlock(Right)") || name.Equals("StartBlock(Down)") || name.Equals("StartBlock(Left)"))
+                    if (name.Contains("StartBlock"))
                     {
                         GameObject character = Managers.TargetObject.GetTargetObject("Character");
-                        Debug.Log($"{character}");
                         character.transform.position = block.transform.position + new Vector3(0, 0.9f, 0);
                         character.GetComponent<Character>().CurrentPositionInMap = blockId;
                         character.GetComponent<Character>().CurrentBlock = block;

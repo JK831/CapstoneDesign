@@ -25,12 +25,13 @@ public class PlayButtonEvents : MonoBehaviour
 
             Managers.CodingArea._mainAreaSaved = Instantiate(g.transform.Find("HorizontalBlock Ins WhenPlayClicked").Find("Section0").Find("Body"));
             DontDestroyOnLoad(Managers.CodingArea._mainAreaSaved);
-            Debug.Log($"{Managers.CodingArea._mainAreaSaved.name}");
+            Managers.CodingArea._mainAreaSaved.name = "MainAreaSaved";
+            //Debug.Log($"{Managers.CodingArea._mainAreaSaved.name}");
 
             Managers.CodingArea._functionAreaSaved = Instantiate(g.transform.Find("FunctionArea").Find("Section0").Find("Body"));
             DontDestroyOnLoad(Managers.CodingArea._functionAreaSaved);
-            Debug.Log($"{Managers.CodingArea._functionAreaSaved.name}");
-
+            Managers.CodingArea._functionAreaSaved.name = "FunctionAreaSaved";
+            //Debug.Log($"{Managers.CodingArea._functionAreaSaved.name}");
 
             //카메라 전환
             GameObject.Find("QuaterView Camera").GetComponent<CameraController>().ChangeToQuarterView();
@@ -46,14 +47,14 @@ public class PlayButtonEvents : MonoBehaviour
             Debug.Log(e2ExecutionManager.totalNumOfBlocks);
             e2ExecutionManager.PlayAfterDelay();
 
+            //isMoved = true (이동하지 않는 명령블록 조합일 경우에 강제 조정)
+            BE2_TargetObject bE2_TargetObject = Managers.TargetObject.GetTargetObjectComponent();
+            bE2_TargetObject.SetIsmovedTrueWithDelay(1.5f);
 
             //시작 버튼 제거
             gameObject.SetActive(false);
 
         }
-
-
-
 
     }
 

@@ -14,6 +14,7 @@ public class ChangeScene : MonoBehaviour
         if(StageManager.Basic == true)
         {
             Managers.Clear();
+            Managers.CodingArea.Clear();
             SceneManager.LoadScene("MainPage");
             StageManager.ToMain = true;
             
@@ -21,6 +22,7 @@ public class ChangeScene : MonoBehaviour
         else if(StageManager.Codition == true)
         {
             Managers.Clear();
+            Managers.CodingArea.Clear();
             SceneManager.LoadScene("MainPage");
             StageManager.ToMain2 = true;
 
@@ -28,6 +30,7 @@ public class ChangeScene : MonoBehaviour
         else if(StageManager.Loop == true)
         {
             Managers.Clear();
+            Managers.CodingArea.Clear();
             SceneManager.LoadScene("MainPage");
             StageManager.ToMain3 = true;
 
@@ -36,6 +39,7 @@ public class ChangeScene : MonoBehaviour
         else if (StageManager.Challenge == true)
         {
             Managers.Clear();
+            Managers.CodingArea.Clear();
             SceneManager.LoadScene("MainPage");
             StageManager.ToMain4 = true;
         }
@@ -45,6 +49,7 @@ public class ChangeScene : MonoBehaviour
     }
     public void MoveToStage()
     {
+        Managers.CodingArea.Clear();
         MoveToMain();
     }
     
@@ -58,6 +63,7 @@ public class ChangeScene : MonoBehaviour
     {
     
         Managers.Clear();
+        Managers.CodingArea.Clear();
         string sceneName = SceneManager.GetActiveScene().name;
         int sceneNameLastIndex = sceneName.Length - 1;
         int replaceNum = sceneName[sceneNameLastIndex] + 1; //basic 1
