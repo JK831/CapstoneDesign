@@ -45,21 +45,21 @@ public class ChangeScene : MonoBehaviour
     }
     public void MoveToStage()
     {
-        Managers.CodingArea.Clear();
+        Managers.Music.audioSource.gameObject.SetActive(true);
         MoveToMain();
     }
     
     public void ReloadMe()
     {
         Managers.Clear();
+        Managers.Music.audioSource.gameObject.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MoveToNext()
     {
-    
         Managers.Clear();
-        Managers.CodingArea.Clear();
+        Managers.Music.audioSource.gameObject.SetActive(true);
         string sceneName = SceneManager.GetActiveScene().name;
         int sceneNameLastIndex = sceneName.Length - 1;
         int replaceNum = sceneName[sceneNameLastIndex] + 1; //basic 1

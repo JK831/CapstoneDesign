@@ -21,4 +21,9 @@ public class Button_2 : MonoBehaviour
     {
         Managers.Music.PlaySE("Pop (2)");
     }
+
+    public void PlaySE2()
+    {
+        Managers.Music.PlaySE("Special & Powerup (5)");
+    }
 }

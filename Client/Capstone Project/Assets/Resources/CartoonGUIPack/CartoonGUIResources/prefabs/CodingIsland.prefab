@@ -715,6 +715,7 @@ GameObject:
   - component: {fileID: 2926298144440353882}
   - component: {fileID: 2736293401516806875}
   - component: {fileID: 1333051178}
+  - component: {fileID: 140628145611163052}
   m_Layer: 5
   m_Name: LoopStage_Select
   m_TagString: Untagged
@@ -871,6 +872,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &140628145611163052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108835025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7332cdf1cc9648c4c861b0f9bd723b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &119704463
 GameObject:
   m_ObjectHideFlags: 0
@@ -11283,6 +11296,7 @@ GameObject:
   - component: {fileID: 557245024838977820}
   - component: {fileID: 8813802221636642614}
   - component: {fileID: 118458132}
+  - component: {fileID: 4761116314250875090}
   m_Layer: 5
   m_Name: ConditionStage_Select
   m_TagString: Untagged
@@ -11439,6 +11453,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4761116314250875090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492936993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7332cdf1cc9648c4c861b0f9bd723b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500413653
 GameObject:
   m_ObjectHideFlags: 0
@@ -14866,7 +14892,7 @@ GameObject:
   - component: {fileID: 4757192307377680646}
   - component: {fileID: 661220216}
   - component: {fileID: 1208907572545739183}
-  - component: {fileID: 61684408}
+  - component: {fileID: 8501773830125821022}
   m_Layer: 5
   m_Name: BasicStage_Select
   m_TagString: Untagged
@@ -14992,25 +15018,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5fed5270cbdd344830ad58d0684b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &61684408
-Animator:
-  serializedVersion: 3
+--- !u!114 &8501773830125821022
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997181534}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f78fc4b1541340ba63ec1be4852bf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7332cdf1cc9648c4c861b0f9bd723b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2018656244
 GameObject:
   m_ObjectHideFlags: 0
@@ -26568,6 +26587,7 @@ GameObject:
   - component: {fileID: 1541842255}
   - component: {fileID: 1541842252}
   - component: {fileID: 4705373311683777639}
+  - component: {fileID: 3826561990597529769}
   m_Layer: 5
   m_Name: ChallengeStage_Select
   m_TagString: Untagged
@@ -26679,6 +26699,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c1ad1197bf89754aa73b9821fa1da01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3826561990597529769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4159097566330583445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7332cdf1cc9648c4c861b0f9bd723b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4165360723874874036
@@ -39813,15 +39845,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fa2433cef1d5ac4aa404f164caad9bc, type: 3}
---- !u!1 &8842777542398234226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8842777540848156253, guid: 4fa2433cef1d5ac4aa404f164caad9bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1685893167}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5257539162848795422 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5257539162377169713, guid: 4fa2433cef1d5ac4aa404f164caad9bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1685893167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8842777542398234226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8842777540848156253, guid: 4fa2433cef1d5ac4aa404f164caad9bc,
     type: 3}
   m_PrefabInstance: {fileID: 1685893167}
   m_PrefabAsset: {fileID: 0}
