@@ -9,7 +9,10 @@ public class UI_ClearPopup : UI_Finished
     
     public override void Init()
     {
-        
+
+        Managers.Music.audioSource.gameObject.SetActive(false);
+        Managers.Music.PlaySE("You Win (5)");
+
         acquiredStars = Managers.Stage.CompletedConditionList.Count;
         Transform bg_window = gameObject.transform.Find("ChallegeStage_Complete").Find("bg_window");
 
